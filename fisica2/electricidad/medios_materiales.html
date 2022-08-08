@@ -1,0 +1,181 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>medios_materiales</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Electrostática en medios materiales"><h2 id="Electrostática en medios materiales" class="header"><a href="#Electrostática en medios materiales">Electrostática en medios materiales</a></h2></div>
+
+<p>
+<a href="conductores.html">Conductores</a>
+</p>
+<ul>
+<li>
+En presencia de un pequeño campo eléctrico, permiten el movimiento libre de electrones.
+
+</ul>
+
+<p>
+<a href="aislantes.html">Aislantes</a> (dieléctricos)
+</p>
+<ul>
+<li>
+En presencia de un pequeño campo eléctrico, no permiten el movimiento libre de electrones.
+
+</ul>
+
+<p>
+<a href="capacitores.html">Capacitores</a>
+</p>
+
+<p>
+\(Pila\): impone una diferencia de potencial entre 2 puntos.
+</p>
+<ul>
+<li>
+Las cargas se mueven hasta que se cumple el potencial impuesto. (No se crea ni se destruye carga)
+
+</ul>
+
+<div id="Método de &quot;mallas e islas&quot;"><h2 id="Método de &quot;mallas e islas&quot;" class="header"><a href="#Método de &quot;mallas e islas&quot;">Método de "mallas e islas"</a></h2></div>
+
+<p>
+Método para hallar la carga y polaridad de cada capacitor en el estado estacionario.
+</p>
+<ul>
+<li>
+<span id="Método de &quot;mallas e islas&quot;-Malla"></span><strong id="Malla">Malla</strong>: camino cerrado donde se cumple: \(\oint dV = \oint \vec E \cdot d\vec l = 0\)
+
+<li>
+<span id="Método de &quot;mallas e islas&quot;-Isla"></span><strong id="Isla">Isla</strong>: porción del circuito donde se cumple: \( q_{inicial}^{neta} = q_{final}^{neta}\)
+
+</ul>
+
+<p>
+De cada isla y malla sacamos una ecuación.
+</p>
+
+<ol>
+<li>
+Asignar (arbitrariamente) la polaridad de cada capacitor e indicarla en el esquema.
+
+<li>
+Elegir (arbitrariamente) un sentido de circulación para cada malla (indicarlo).
+
+<li>
+Elegir (arbitrariamente) dónde comenzar a circular las mallas.
+
+<li>
+Plantear las ecuaciones de mallas e islas necesarias y resolver el sistema.
+
+<li>
+Si la carga de un capacitor resultó ser:
+
+<ul>
+<li>
+ positiva, entonces la polaridad del capacitor es la indicada en el esquema.
+
+<li>
+ negativa, entonces la polaridad del capacitor es contraria a la indicada en el esquema.
+
+</ul>
+</ol>
+
+<div id="Distribuciones de carga"><h2 id="Distribuciones de carga" class="header"><a href="#Distribuciones de carga">Distribuciones de carga</a></h2></div>
+
+<p>
+<span id="Distribuciones de carga-“Libres”"></span><strong id="“Libres”">“Libres”</strong>: puede haber tanto en el vacío, como en materiales conductores, e incluso en dieléctricos
+</p>
+<ul>
+<li>
+En dieléctricos las cargas libres, no son libres en el sentido de “móviles”, sino “en exceso”.
+
+</ul>
+
+<p>
+<span id="Distribuciones de carga-De polarización"></span><strong id="De polarización">De polarización</strong>:
+</p>
+<ul>
+<li>
+solo puede haber en materiales dieléctricos (ni en el vacío, ni en conductores). Siempre es nula la carga neta de polarización de un material dieléctrico.
+
+<li>
+La densidad de carga polarizada es el vector \(\vec P\) en ese punto por la normal (versor) saliente del dieléctrico.
+
+<li>
+\(\sigma_{p} = \vec P |_{sup} \hat n_{saliente}\), por lo que \( \sigma_p S = Q_p\)
+
+<li>
+\(\rho_{p} = -\vec \nabla \cdot \vec P\), solo existe si la carga está dentro del dieléctrico.
+
+</ul>
+
+<p>
+<img src="../../images/distribucion_de_cargas_polarizacion.png" />
+</p>
+
+<div id="Campos de electricidad"><h2 id="Campos de electricidad" class="header"><a href="#Campos de electricidad">Campos de electricidad</a></h2></div>
+
+<p>
+Campo <span id="Campos de electricidad-eléctrico"></span><strong id="eléctrico">eléctrico</strong> \(\vec E\)
+</p>
+<ul>
+<li>
+El flujo depende de las cargas de polarización y las libres.
+
+</ul>
+
+<p>
+Campo vector de <span id="Campos de electricidad-polarización"></span><strong id="polarización">polarización</strong>: \(\vec P = \frac{\partial \vec p}{\partial Vol}\), momento dipolar eléctrico por unidad de volumen.
+</p>
+<ul>
+<li>
+\(\vec P\) nulo en el vacío. (no hay moleculas polarizadas)
+
+<li>
+Nace en las cargas de polarización negativas y muere en las positivas.
+
+<li>
+El flujo depende solo de las cargas de polarización.
+
+</ul>
+
+<p>
+Campo vector de desplazamiento: Campo auxiliar \(\vec D = \epsilon_0 \vec E + \vec P\)
+</p>
+<ul>
+<li>
+Nace en las cargas libres positivas y muere en las negativa
+
+<li>
+El flujo solo depende de las cargas libres.
+
+</ul>
+
+\begin{align}
+\vec P = \epsilon_0 \chi_e \vec E \\
+\epsilon_r = 1 + \chi_e \\
+\vec D = \epsilon \vec E = \epsilon_0 \epsilon_r \vec E\\
+\vec E = \frac{\vec D - \vec P}{\epsilon_0}\\
+\end{align}
+
+<div id="Campos de electricidad-Ley de gauss generalizada"><h4 id="Ley de gauss generalizada" class="header"><a href="#Campos de electricidad-Ley de gauss generalizada">Ley de gauss generalizada</a></h4></div>
+
+\begin{align}
+\phi_{E(S)} = \int_S \vec E \cdot d\vec s = {q_{encerrada} \over \epsilon_0}\\
+q_{total} = q_{libre} + q_{pol}\\
+\phi_{D(S)} = \int_S \vec D \cdot d\vec s = q^{libre}_{enc(S)}\\
+\phi_{P(S)} = \int_S \vec P \cdot d\vec s = -q^{pol}_{enc(S)}\\
+\end{align}
+
+    </article>
+</body>
+</html>

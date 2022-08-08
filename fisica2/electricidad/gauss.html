@@ -1,0 +1,150 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>gauss</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Flujo"><h2 id="Flujo" class="header"><a href="#Flujo">Flujo</a></h2></div>
+
+<p>
+El flujo es proporcional a la cantidad de líneas de campo que atraviesan/pinchan la superficie:
+</p>
+
+<p>
+<img src="../../images/lineas_campo_flujo.png" />
+</p>
+
+\begin{align}
+\phi_{S_1} = 10L \\
+\phi_{S_2} = -5L \\
+\phi_{S_3} = 0L = 0\\
+\end{align}
+
+<p>
+Vemos que aunque el flujo de \(S_3\) sea \(0\), no quiere decir que no haya carga dentro, si no que las que salen por un lado entran por otro, por lo que el neto es \(0\).
+</p>
+
+<div id="Teorema de gauss"><h1 id="Teorema de gauss" class="header"><a href="#Teorema de gauss">Teorema de gauss</a></h1></div>
+
+<p>
+Nos ayuda a calcular el flujo (magnitud escalar) de un campo vectorial a través de una superficie \(S\).
+</p>
+
+\begin{align}
+\phi_{E(S)} = \int_S \vec E \cdot d\vec s
+\end{align}
+
+<p>
+El flujo es proporcional a la cantidad de líneas de campo que atraviesan/pinchan la superficie, por lo que para cualquier superficie \(S\) que encierre al conjunto de cargas:
+</p>
+
+\begin{align}
+\phi_{E(S)} = \int_S \vec E \cdot d\vec s = {q_{encerrada} \over \epsilon_0}\\
+\end{align}
+
+<p>
+<hr>
+</p>
+<ul>
+<li>
+\(\rho\) (densidad de carga volumétrica) está definida como:
+
+</ul>
+
+\begin{align}
+\rho = { dq \over dv } \\
+q_{enc(S)} = \iiint_{V(S)} \rho dv \\
+\end{align}
+
+<p>
+Si \(\rho\) es constante: \(q_{enc(S)} = \rho V\)
+<hr>
+</p>
+
+<p>
+Para resolver \(\phi_{E(S)}\), puedo plantear el teorema de la divergencia (flujo de una superficie cerrada es igual al la integral triple de la divergencia):
+</p>
+
+\begin{align}
+\int_S \vec E \cdot d\vec s  = \iiint_{V(S)} \vec \nabla \cdot \vec E dv\\
+\end{align}
+
+<p>
+Por lo que puedo plantear:
+</p>
+\begin{align}
+\phi_{E(S)} = \int_S \vec E \cdot d\vec s = {q_{encerrada} \over \epsilon_0} = {1 \over \epsilon_0} \iiint_{V(S)} \rho dv = \iiint_{V(S)} \vec \nabla \cdot \vec E dv\\
+\end{align}
+
+<p>
+Y llego a la conclusión que: \(\vec \nabla \cdot \vec E = \frac{\rho}{\epsilon_0}\)
+</p>
+
+<div id="Teorema de gauss-Cálculo de campo por gauss"><h2 id="Cálculo de campo por gauss" class="header"><a href="#Teorema de gauss-Cálculo de campo por gauss">Cálculo de campo por gauss</a></h2></div>
+
+<p>
+Puedo utilizar la ley de gauss para encontrar la intensidad del campo. Para ello encierro la superficie/volumen cargado (que produce el campo) con una superficie gaussiana y hallo el campo a través de esta y despejo la intensidad del campo.
+</p>
+<blockquote>
+obs: obvio que se puede calcular el campo con coulomb, pero es mucho mas complicado matemáticamente
+</blockquote>
+
+<p>
+Solo puedo hacer esto siempre y cuando el campo \(E\) sea <span id="Teorema de gauss-Cálculo de campo por gauss-uniforme"></span><strong id="uniforme">uniforme</strong> (con respecto a las variables de las que depende la superficie gaussiana), para poder sacarlo fuera de la integral.
+</p>
+<ul>
+<li>
+Puede ocurrir que tenga una superficie que parezca uniforme (por su geometría), pero que no sea uniforme por su distribución eléctrica.
+
+<li>
+Ejemplo: esfera de \(\rho = cos(\phi)\), en un polo de la esfera tengo carga positiva y en el otro negativa, por lo que no puedo utilizar gauss para resolver el problema.
+
+</ul>
+
+<p>
+Antes de calcular la intensidad, previamente tengo que calcular la dirección que va a tener este campo (generalmente a ojo, o poniendo carguitas y viendo para donde apuntaría la fuerza)
+</p>
+
+<p>
+Queremos elegir una superficie gaussiana tal que el campo sea uniforme y paralelo a la normal de la superficie, o bien perpendicular.
+</p>
+
+<p>
+No siempre puedo encontrar el campo desde Gauss. puede pasar que no puedo predecir para donde apunta el campo (porque depende de varias variable, tiene componente en muchos versores, etc)
+</p>
+
+<div id="Teorema de gauss-Cálculo de campo por gauss-Principio de superposición"><h3 id="Principio de superposición" class="header"><a href="#Teorema de gauss-Cálculo de campo por gauss-Principio de superposición">Principio de superposición</a></h3></div>
+
+<p>
+Si en una configuración de cargas  no puedo definir (a priori) la dependencia del campo con las coordenadas espaciales, ni su dirección. Podemos usar el principio de superposición para descomponer el problema en otros que sí tengan dichas simetrías.
+</p>
+
+<p>
+<img src="../../images/superposicion_gaussianas.png" />
+</p>
+
+
+<p>
+ejemplo plano e hilo infinitos superposicion PAG 18 CUADERNO
+</p>
+
+<p>
+<hr>
+Al aplicar la ley de Gauss las cargas en cuestión son las que se encuentran <span id="Teorema de gauss-Cálculo de campo por gauss-Principio de superposición-dentro"></span><strong id="dentro">dentro</strong> de la superficie gaussiana. Esto significa que las que quedan fuera no colaboran en el resultado final.
+</p>
+
+<p>
+Recordar que la ley de Gauss es válida siempre, más alla de que el caso sea fácil o dificil.
+</p>
+
+    </article>
+</body>
+</html>

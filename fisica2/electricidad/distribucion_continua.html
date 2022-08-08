@@ -1,0 +1,147 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>distribucion_continua</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Distribución continua de cargas"><h2 id="Distribución continua de cargas" class="header"><a href="#Distribución continua de cargas">Distribución continua de cargas</a></h2></div>
+
+<p>
+Cambiamos 'la sumatoria por la intergral'
+</p>
+
+\begin{align}
+\vec E(\vec r) = k \int \frac{dq_i'}{|\vec r - \vec r'_i|^3} (\vec r - \vec r'_i)\\
+\end{align}
+
+<p>
+Modelos de carga distribuida:
+</p>
+<ul>
+<li>
+Lineal:  \(dq'=\lambda (\vec r') dl'\), \([\lambda]= {C \over m}\)
+
+<li>
+Superficial: \(dq'=\sigma (\vec r') dl'\), \([\sigma]= {C \over m^2}\)
+
+<li>
+Volumétrica: \(dq'=\rho (\vec r') dl'\), \([\rho]= {C \over m^3}\)
+
+</ul>
+
+<div id="Cálculo del campo de un anillo"><h2 id="Cálculo del campo de un anillo" class="header"><a href="#Cálculo del campo de un anillo">Cálculo del campo de un anillo</a></h2></div>
+
+<p>
+Calculo del campo en el eje \(Z\) de un anillo (\(\sigma_0\)) cargado positivamente en el origen (de \(r_1\) a \(r_2\))
+</p>
+
+\begin{align}
+\vec r = 0 \hat x + 0 \hat y + z \hat z = (0,0,z) \\
+\vec r' = x' \hat x + y' \hat y + 0 \hat z = r'cos(\phi') \hat x + r'sin(\phi') \hat y  \\
+\end{align}
+
+<p>
+\(r'\) es donde está el anillo y \(r\) donde calculo el campo.
+</p>
+
+<p>
+Puedo predecir para donde apuntará algun punto del campo. elijo un punto en el eje \(z\) y me doy cuenta que las componentes de la fuerza que le ejerce el anillo solo tienen componente \(z\), ya que las otras componentes se cancelan (ya que el anillo tiene densidad de carga constante).
+</p>
+
+<p>
+Tengo que plantear la integral de campo continuo.\( \vec E(\vec r) = k \int \frac{dq_i'}{|\vec r_1 - \vec r'_i|^3} (\vec r_1 - \vec r'_i)\\\)
+</p>
+
+<ul>
+<li>
+\(dq_i'= \sigma_0 ds = \sigma_0 r' dr'd\phi'\) (jacobiano cilindricas)
+
+</ul>
+
+
+\begin{align}
+\vec E(\vec r) = k \int_0^{2\pi}\int_{r_1}^{r_2} \frac{ \sigma_0 r' dr'd\phi'}{(r'^2 + z^2)^{\frac 32}} (-r'cos(\phi'), -r'sin(\phi'), z)\\
+\end{align}
+
+<p>
+Parece 1 integral doble pero en verdad son 3 integrales dobles, una para cada componente vectorial.
+</p>
+
+<p>
+Las primeras 2 integrales (\(E_x\) y \(E_y\)) son ambas 0, ya que estoy integrando una función periodica (seno y coseno respectivamente) durante un ciclo completo (\(0 \to 2\pi\)).
+</p>
+
+<p>
+En cuanto a la tercera, el planteo es:
+</p>
+
+\begin{align}
+\vec E(0,0,z) = k \int_0^{2\pi}\int_{R_1}^{R_2} \frac{ \sigma_0 r' dr'd\phi' z }{(r'^2 + z^2)^{\frac 32}}\\
+\end{align}
+
+<p>
+Se resuelve con la tabla de integrales:
+</p>
+
+\begin{align}
+E_z = k \sigma_0 z 2\pi \left[ {1 \over \sqrt{R_1^2 - z^2}} - {1 \over \sqrt{R_2^2 - z^2}}\right]
+\end{align}
+
+<p>
+Y ese es el resultado del campo de un anillo (\(R_1&lt;R_2\)).
+</p>
+
+<p>
+Con esta expresión podemos encontrar el campo que genera en el eje \(z\) un PLATILLO de radio \(R\), para ello hacemos tender a \(0\) al primer radio:
+</p>
+
+<p>
+Platillo:
+</p>
+<ul>
+<li>
+\(R_1 \to 0\)
+
+<li>
+\(R_2 = R\)
+
+</ul>
+
+\begin{align}
+E_z = k \sigma_0 z 2\pi \left[ {1 \over |z|} - {1 \over \sqrt{R_2^2 - z^2}} \right]
+\end{align}
+
+<p>
+Y también puedo plantear un <span id="Cálculo del campo de un anillo-plano infinito"></span><strong id="plano infinito">plano infinito</strong> haciendo que el radio del platillo tienda a infinito.
+</p>
+
+<p>
+Plano infinito:
+</p>
+<ul>
+<li>
+\(R \to \inf\)
+
+</ul>
+
+\begin{align}
+E_z = k \sigma_0 z 2\pi {1 \over |z|} =  k \sigma_0 2\pi signo(Z)
+\end{align}
+
+<ul>
+<li>
+Como se ve en la formula, en un plano infinito no nos cambia que tan alejados estemos del plano. El campo será constante (solo cambia el signo).
+
+</ul>
+
+    </article>
+</body>
+</html>

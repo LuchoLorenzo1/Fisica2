@@ -1,0 +1,180 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>hilo_corto_biot_savart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Ejemplo: Hilo recto corto de corriente"><h2 id="Ejemplo: Hilo recto corto de corriente" class="header"><a href="#Ejemplo: Hilo recto corto de corriente">Ejemplo: Hilo recto corto de corriente</a></h2></div>
+
+<ul>
+<li>
+Hallaremos el campo magnético generado en todo el espacio por una corriente continua lineal, recta y de longitud finita \(L\) (porción de un circuito más complejo).
+
+</ul>
+
+<p>
+<img src="../../images/hilo_corto.png" />
+</p>
+
+\begin{align}
+\vec B(\vec r) = \frac{\mu_0}{4 \pi} \int {i d\vec l \times (\vec r - \vec r') \over  |\vec r - \vec r'|^3}
+\end{align}
+
+<p>
+Observación: Hay simetría de rotación en \(\varphi\) (me muevo en \(\varphi\) y veo lo mismo).
+</p>
+
+<p>
+Por lo tanto, el campo solo dependerá de \(\rho\) y de \(z\) :
+</p>
+
+\begin{align}
+\vec{B}(\vec{r})=\vec{B}(\rho, \not \varphi, z)=\vec{B}(\rho, z)
+\end{align}
+
+<ul>
+<li>
+Queremos calcular el campo en todo el espacio:
+
+</ul>
+
+<p>
+<span id="Ejemplo: Hilo recto corto de corriente-Punto campo"></span><strong id="Punto campo">Punto campo</strong> \(\quad \vec{r}=x \hat{\imath}+y \hat{\jmath}+z \hat{k}\)
+</p>
+
+<p>
+O bien: \(\quad \vec{r}=\rho \cos \varphi \hat{\imath}+\rho \operatorname{sen} \varphi \hat{\jmath}+z \hat{k}\)
+</p>
+
+<p>
+O bien: \(\quad \vec{r}=\rho \hat{\rho}+z \hat{k}\)
+</p>
+
+<p>
+<span id="Ejemplo: Hilo recto corto de corriente-Punto fuente"></span><strong id="Punto fuente">Punto fuente</strong> \(\quad \vec{r}^{\prime}=z^{\prime} \hat{k}\)
+</p>
+
+<ul>
+<li>
+Luego calculamos: \((\vec r - \vec r') = x \hat i + y \hat j + (z - z') \hat k\)
+
+<ul>
+<li>
+o bien en cilindricas.
+
+</ul>
+</ul>
+
+\begin{align}
+&amp;\left(\vec{r}-\vec{r}^{\prime}\right)=x \hat{\imath}+y \hat{\jmath}+\left(z-z^{\prime}\right) \hat{k} \\
+&amp;\left|\vec{r}-\vec{r}^{\prime}\right|=\sqrt{x^{2}+y^{2}+\left(z-z^{\prime}\right)^{2}}
+\end{align}
+
+<ul>
+<li>
+Corriente lineal: \(i d \vec l'\)
+
+<ul>
+<li>
+Parametrizamos \(d \vec{l}^{\prime} = dz' \hat k\) y definimos los límites de integración \( - \frac L2 \leq z' \leq \frac L2\)
+
+</ul>
+</ul>
+
+<div id="Ejemplo: Hilo recto corto de corriente-Cartesianas"><h6 id="Cartesianas" class="header"><a href="#Ejemplo: Hilo recto corto de corriente-Cartesianas">Cartesianas</a></h6></div>
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=d z^{\prime} \hat{k} \times\left[\rho \cos \varphi \hat{\imath}+\rho \operatorname{sen} \varphi \hat{\jmath}+\left(z-z^{\prime}\right) \hat{k}\right]\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=\left|\begin{array}{ccc}\hat{\imath} &amp; \hat{\jmath} &amp; \hat{k} \\ 0 &amp; 0 &amp; d z^{\prime} \\ \rho \cos \varphi &amp; \rho \operatorname{sen} \varphi &amp; \left(z-z^{\prime}\right)\end{array}\right|\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=-\rho \operatorname{sen} \varphi d z^{\prime} \hat{\imath}+\rho \cos \varphi d z^{\prime} \hat{\jmath}+0 \hat{k}\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=\rho d z^{\prime}(-\operatorname{sen} \varphi \hat{\imath}+\cos \varphi \hat{\jmath})\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=\rho d z^{\prime} \hat{\varphi}\)
+</p>
+
+<div id="Ejemplo: Hilo recto corto de corriente-Cilindricas"><h6 id="Cilindricas" class="header"><a href="#Ejemplo: Hilo recto corto de corriente-Cilindricas">Cilindricas</a></h6></div>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=d z^{\prime} \hat{k} \times\left[\rho \hat{\rho}+\left(z-z^{\prime}\right) \hat{k}\right]\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=\left|\begin{array}{ccc}\hat{\rho} &amp; \hat{\varphi} &amp; \hat{k} \\ 0 &amp; 0 &amp; d z^{\prime} \\ \rho &amp; 0 &amp; \left(z-z^{\prime}\right)\end{array}\right|\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=0 \hat{\rho}+\rho d z^{\prime} \hat{\rho}+0 \hat{k} \quad\)
+</p>
+
+<p>
+\(d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)=\rho d z^{\prime} \hat{\varphi}\)
+</p>
+
+<div id="Ejemplo: Hilo recto corto de corriente-planteo Biot-Savart"><h5 id="planteo Biot-Savart" class="header"><a href="#Ejemplo: Hilo recto corto de corriente-planteo Biot-Savart">planteo Biot-Savart</a></h5></div>
+
+\begin{align}
+\vec{B}(\vec{r})=\frac{\mu_{0}}{4 \pi} \int \frac{i d \vec{l}^{\prime} \times\left(\vec{r}-\vec{r}^{\prime}\right)}{\left|\vec{r}-\vec{r}^{\prime}\right|^{3}}=\frac{\mu_{0} i}{4 \pi} \int_{-L / 2}^{L / 2} \frac{\rho d z^{\prime} \hat{\varphi}}{\left(\rho^{2}+\left(z-z^{\prime}\right)^{2}\right)^{3 / 2}}
+\end{align}
+
+<ul>
+<li>
+Tenemos una integral por cada componente:
+
+</ul>
+
+\begin{align}
+B_{\varphi}(\rho, z)=\frac{\mu_{0} i}{4 \pi} \int_{-\frac{L}{2}}^{+\frac{L}{2}} \frac{\rho d z^{\prime}}{\left(\rho^{2}+\left(z-z^{\prime}\right)^{2}\right)^{3 / 2}}=\frac{\mu_{0} i \rho}{4 \pi} \int_{-\frac{L}{2}}^{+\frac{L}{2}} \frac{d z^{\prime}}{\left(\rho^{2}+\left(z-z^{\prime}\right)^{2}\right)^{3 / 2}}
+\end{align}
+
+<p>
+Por sustitución y por tabla de integrales:
+</p>
+\begin{align}
+&amp; u=z-z^{\prime} \\
+&amp; \int \frac{d u}{\left(\rho^{2}+u^{2}\right)^{3 / 2}}=\frac{u}{\rho^{2} \sqrt{\rho^{2}+u^{2}}}+C \\
+&amp; d u=-d z^{\prime} \quad \Rightarrow \quad d z^{\prime}=-d u \\
+&amp; B_{\varphi}(\rho, z)=\Theta \frac{\mu_{0} i \rho}{4 \pi} \int_{\left(z+\frac{L}{2}\right)}^{\left.z-\frac{L}{2}\right)} \frac{d u}{\left(\rho^{2}+u^{2}\right)^{\frac{3}{2}}}=-\frac{\mu_{0} i \rho}{4 \pi}\left(\frac{(z-L / 2)}{\rho^{2} \sqrt{\rho^{2}+(z-L / 2)^{2}}}-\frac{(z+L / 2)}{\rho^{2} \sqrt{\rho^{2}+(z+L / 2)^{2}}}\right) \\
+\end{align}
+
+<p>
+Resultado:
+</p>
+\begin{align}
+\vec{B}(\rho, z)=\frac{\mu_{0} i}{4 \pi \rho}\left(\frac{(L / 2-z)}{\sqrt{\rho^{2}+(z-L / 2)^{2}}}+\frac{(L / 2+z)}{\sqrt{\rho^{2}+(z+L / 2)^{2}}}\right) \hat{\varphi}
+\end{align}
+
+
+<div id="Hilo infinito"><h1 id="Hilo infinito" class="header"><a href="#Hilo infinito">Hilo infinito</a></h1></div>
+<ul>
+<li>
+Hacemos tender \(L\) a infinito (o bien, nos alejamos de los bordes: \(|z|&lt;&lt;L\) ):
+
+</ul>
+
+\begin{align}
+&amp; B_{\varphi}=\lim _{L \rightarrow \infty}\left(\frac{\mu_{0} i}{4 \pi \rho}\left(\frac{(L / 2-z)}{\sqrt{\rho^{2}+(L / 2-z)^{2}}}+\frac{(L / 2+z)}{\sqrt{\rho^{2}+(L / 2+z)^{2}}}\right)\right) \\
+&amp; B_{\varphi}=\lim _{L \rightarrow \infty}\left(\frac{\mu_{0} i}{4 \pi \rho}\left(\frac{1}{\sqrt{\left.\left(\frac{\rho}{L / 2-z}\right)\right)^{2}+1}}+\frac{1}{\sqrt{\left(\frac{\rho}{z+L / 2}\right)^{2}+1}}\right)\right) \\
+&amp; \vec{B}(\rho)=\frac{\mu_{0} i}{2 \pi \rho} \hat{\varphi} \\
+\end{align}
+
+    </article>
+</body>
+</html>

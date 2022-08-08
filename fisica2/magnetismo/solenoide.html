@@ -1,0 +1,110 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>solenoide</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Solenoide Infinito"><h2 id="Solenoide Infinito" class="header"><a href="#Solenoide Infinito">Solenoide Infinito</a></h2></div>
+
+<p>
+Ejemplo: Solenoide infinito: Cilindro infinito con K azimutal uniforme
+</p>
+
+<p>
+Dada una distribución de corriente azimutal, distribuida de uniformemente en forma cilíndrica con radio R y longitud L tendiendo a infinito, vamos a hallar el campo magnético que genera en todo el espacio
+</p>
+
+<p>
+<img src="../../images/solenoide_infinito.png" />
+</p>
+
+<p>
+<span id="Solenoide Infinito-1)"></span><strong id="1)">1)</strong> Determinar la <span id="Solenoide Infinito-dependencia"></span><strong id="dependencia">dependencia</strong> <span id="Solenoide Infinito-del"></span><strong id="del">del</strong> <span id="Solenoide Infinito-campo"></span><strong id="campo">campo</strong> con las coordenadas espaciales
+</p>
+<ul>
+<li>
+Simetría de rotación en \(\varphi\) y de traslación en \(z\) (me muevo y veo lo mismo)
+
+</ul>
+
+\begin{align}
+\vec B(\vec r) = \vec B(\rho, \not \varphi, \not z) = \vec B(\rho)
+\end{align}
+
+<p>
+<span id="Solenoide Infinito-2)"></span><strong id="2)">2)</strong> <span id="Solenoide Infinito-El sentido del campo"></span><strong id="El sentido del campo">El sentido del campo</strong>: lo deduzco con la Regla de la mano derecha o lo dejo positivo
+</p>
+<ul>
+<li>
+\(\vec B = B(\rho) \hat k\) (dentro del solenoide)
+
+<li>
+\(\vec B = \vec 0\) (fuera del solenoide)
+
+</ul>
+
+<p>
+<span id="Solenoide Infinito-3)"></span><strong id="3)">3)</strong> Elegir una curva amperiana
+</p>
+
+<p>
+<img src="../../images/amperiana_solenoide_infinito.png" />
+</p>
+<pre>
+Obs.: Si tomo una curva de ampere que concatene tanto corrientes entrantes como salientes a la pantalla, no está mal pero llego a algo trivial: 0=0.
+</pre>
+
+<p>
+<span id="Solenoide Infinito-4)"></span><strong id="4)">4)</strong> Aplicar la ley de Ampère integral para calcular la intensidad del campo.
+</p>
+\begin{align}
+\oint_C \vec B \cdot d \vec l = \mu_0 i_{conc(S(C))}
+\end{align}
+
+\begin{align}
+\int_{BA} B(\rho) \hat k \cdot d \vec l +
+\int_{AD} B(\rho) \hat k \cdot d \vec l +
+\int_{DC} B(\rho) \hat k \cdot d \vec l +
+\int_{CB} B(\rho) \hat k \cdot d \vec l =
+\mu_0 \int_{L(C)} \vec K (\vec r) \cdot dl \hat n_L
+\end{align}
+
+<ul>
+<li>
+\(\hat n_L\) va en dirección de circulación elegido de la curva. (regla de la mano derecha)
+
+<li>
+\(L(C)\) es la curva que resulta de la intersección entre la superficie plana de limiteada por la curva de Ampere C y la distribución de corriente.
+
+</ul>
+
+
+<p>
+De las 4 integrales de la izquierda, solo queda la del tramo \(\overline BC\). Las otras se cancelan por ser perpendiculares al campo (\(\overline BA\) y \(\overline DC\)) o porque el campo es \(\vec 0\) (\(\overline AD\))
+</p>
+
+<p>
+Del lado derecho el \(\vec K\) es paralelo y de sentido contrario a \(\hat n_L\). Y el resultado de la integral es \(l\) porque es la cantidad de carga encerrada en el area de la curva amperiana.
+</p>
+
+\begin{align}
+- B(\rho) \int_0^l dl &amp;= -\mu_0 K\int_{L(C)} 1 \cdot dl \\
+- B(\rho) \int_0^l dl &amp;= -\mu_0 K l \\
+B(\rho) &amp;= \frac{\mu_0 K l}{l}
+\end{align}
+
+\begin{align}
+\hat B(\rho) = \mu_0 K \hat k = \mu_0 \frac NL I \hat k
+\end{align}
+
+    </article>
+</body>
+</html>

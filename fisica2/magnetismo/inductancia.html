@@ -1,0 +1,205 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>inductancia</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Inductancia"><h2 id="Inductancia" class="header"><a href="#Inductancia">Inductancia</a></h2></div>
+
+<p>
+Inductancias mutuas, efecto de producir una fem en una bobina, debido al cambio de corriente en otra bobina acoplada.
+</p>
+
+<p>
+\(\phi_{21} \implies\)  El flujo del campo \(\vec B_1\) (generado por \(i_1\)) y concatenado por el bobinado \(2\).
+</p>
+
+<p>
+Teniendo 2 bobinados, se induce una fem en el segundo por la corriente en el primero:
+</p>
+\begin{align}
+\epsilon_2 = - N_2 \frac{d \phi_{21}}{dt} = -N_2 \frac{d}{dt} \iint_{S_2} \vec B_1 (\vec r) \cdot d\vec s = -M_{21} \frac{d i_1}{dt}
+\end{align}
+
+\begin{align}
+M_{21} = N_2 \frac{d \phi_{21}}{di_1}
+\end{align}
+
+<p>
+Para medios lineales:
+</p>
+
+\begin{align}
+M_{21} = N_2 \frac{\phi_{21}}{i_1}
+\end{align}
+
+<p>
+\(M\) solo depende de la geometría de los bobinados (analogía con capacitores o resistores). Es una magnitud siempre positiva.
+</p>
+
+<p>
+Teorema de la Reciprocidad (para medios <span id="Inductancia-lineales"></span><strong id="lineales">lineales</strong>): \(M_{21} = M_{12} = M\)
+</p>
+
+<p>
+Unidades: \([M] = H\) henrio. \(H = \frac{V\cdot s}{A}\)
+</p>
+
+<div id="Inductancia-Autoinductancia"><h4 id="Autoinductancia" class="header"><a href="#Inductancia-Autoinductancia">Autoinductancia</a></h4></div>
+
+<p>
+fem autoinducida, generada por el propio flujo del campo sobre las espiras donde la corriente generó el campo original.
+</p>
+
+\begin{align}
+\epsilon_1 = - N_1 \frac{d \phi_{11}}{dt} = -N_1 \frac{d}{dt} \iint_{S_1} \vec B_1 (\vec r) \cdot d\vec s = -L_1 \frac{d i_1}{dt}
+\end{align}
+
+\begin{align}
+L_1 = N_1 \frac{d \phi}{d_{i_1}}
+\end{align}
+
+<p>
+Para medios lineales:
+</p>
+\begin{align}
+L_1 = N_1 \frac{\phi}{i_1}
+\end{align}
+<p>
+<span id="Inductancia-Autoinductancia-Inductor"></span><strong id="Inductor">Inductor</strong>: elemento circuital de gran \(L\).
+</p>
+
+<p>
+<span id="Inductancia-Autoinductancia-Ejemplo"></span><strong id="Ejemplo">Ejemplo</strong>: autoinductancia de un solenoide.
+</p>
+\begin{align}
+L = N \frac{\phi_{seccion-solenoide}}{I} \\
+L = N \frac{\frac{\mu_0 N I \pi R^2}{L}}{I} \\
+L = \frac{\mu_0 N^2 \pi R^2 }{L} \\
+\end{align}
+<p>
+Vemos que no depende de la corriente, solo de las características geométricas.
+</p>
+
+
+<div id="Inductancia-Factor de acoplamiento"><h3 id="Factor de acoplamiento" class="header"><a href="#Inductancia-Factor de acoplamiento">Factor de acoplamiento</a></h3></div>
+
+<p>
+En condiciones lineales, podemos definir un factor de acoplamiento como el cociente entre el flujo de enlace mutuo y el flujo total producido por una de las corrientes:
+</p>
+
+\begin{align}
+k = \frac{\phi_{12}}{\phi_{11}} = \frac{\phi_{21}}{\phi_{22}}
+\end{align}
+
+<p>
+\(k\) es nulo para inductores desacoplados y tiende a 1 para el caso ideal de acoplamiento perfecto, es decir, sin flujo disperso.
+</p>
+
+\begin{align}
+M = k\sqrt{L_1 L_2}
+\end{align}
+
+
+<div id="Inductancia-Relación con fem"><h3 id="Relación con fem" class="header"><a href="#Inductancia-Relación con fem">Relación con fem</a></h3></div>
+
+\begin{align}
+\epsilon_1 = - \frac{d \phi_1}{dt} = - \frac{d}{dt} (\phi_{11} \pm \phi_{12}) \\
+\end{align}
+<p>
+El primer término \(\phi_{11}\) se debe a la autoinductancia y el segundo \(\phi_{12}\) a la inductancia mutua.
+</p>
+
+\begin{align}
+\epsilon_1 &amp;= - [\frac{d \phi_{11}}{dt} \pm \frac{d \phi_{11}}{dt}] \\
+&amp;= - [\frac{d \phi_{11}}{dI_1} \frac{dI_1}{dt} \pm \frac{d \phi{12}}{dI_2} \frac{dI_2}{dt}] \\
+&amp;= - [L_1 \frac{dI_1}{dt} \pm M_{12} \frac{dI_2}{dt}] \\
+\end{align}
+
+<p>
+En conclusión:
+</p>
+\begin{align}
+\epsilon_1 = - L_1 \frac{dI_1}{dt} \pm M_{12} \frac{dI_2}{dt} \\
+\epsilon_2 = - L_2 \frac{dI_2}{dt} \pm M_{21} \frac{dI_1}{dt} \\
+\end{align}
+
+<div id="Inductancia-Bornes homologos"><h3 id="Bornes homologos" class="header"><a href="#Inductancia-Bornes homologos">Bornes homologos</a></h3></div>
+
+<p>
+En los esquemas circuitales, indicamos con un punto los bornes de los inductores a través de los cuales corrientes simultáneamente entrantes o salientes producen flujos magnéticos aditivos. Los llamamos bornes homologos.
+</p>
+
+<p>
+<img src="../../images/bornes_homologos.png" />
+</p>
+
+<p>
+Cuando la corriente en ambos inductores entra por bornes homólogos (o salen por no homólogos o todo al revés), los flujos magnéticos son aditivos. En caso contrario son sustractivos.
+</p>
+
+<div id="Inductancia-Ley de mallas con inductores"><h3 id="Ley de mallas con inductores" class="header"><a href="#Inductancia-Ley de mallas con inductores">Ley de mallas con inductores</a></h3></div>
+
+\begin{align}
+\sum \epsilon - \sum iR = 0 \\
+\sum \epsilon_{fuentes} - \sum L \frac{di}{dt} \pm \sum M \frac{di}{dt}  - \sum iR = 0 \\
+\end{align}
+
+<p>
+obs: \(+\sum M\)  cuando el flujo es aditivo, \(-\sum M\) cuando es sustractivo y \(0\) cuando no están acoplados magnéticamente.
+</p>
+
+<div id="Inductancia-Inductores en serie"><h3 id="Inductores en serie" class="header"><a href="#Inductancia-Inductores en serie">Inductores en serie</a></h3></div>
+
+<p>
+Para un circuito con 2 inductores en serie, la fem inducida es la suma de las fem de cada inductor. En cada inductor hay una fem autoinducida y otra inducida por el otro inductor.
+</p>
+\begin{align}
+\epsilon = \epsilon_1 + \epsilon_2 \\
+\end{align}
+
+<p>
+\(L_{eq}\) para inductores aditivos.
+</p>
+\begin{align}
+L_{eq} = L_1 + L_2 + 2M
+\end{align}
+
+<p>
+\(L_{eq}\) para inductores sustractivos.
+</p>
+\begin{align}
+L_{eq} = L_1 + L_2 - 2M
+\end{align}
+
+<div id="Inductancia-Energía"><h3 id="Energía" class="header"><a href="#Inductancia-Energía">Energía</a></h3></div>
+
+<p>
+Energía almacenada por un inductor energizado
+</p>
+\begin{align}
+U = \frac 12 L I^2
+\end{align}
+
+<p>
+Energía almacenada por un sistema de dos inductores energizados
+</p>
+\begin{align}
+U = \frac 12 L_1 i_1^2 \pm M i_1 i_2 + \frac 12 L_2 i_2^2
+\end{align}
+
+<p>
+El término de la inductancia mutua será positivo si las corrientes entran por bornes homólogos y negativo si entran por bornes no homólogos a los bobinados.
+</p>
+
+    </article>
+</body>
+</html>

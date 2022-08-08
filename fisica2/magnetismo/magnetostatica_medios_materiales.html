@@ -1,0 +1,186 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>magnetostatica_medios_materiales</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+
+<div id="Magnetostática en medios materiales"><h2 id="Magnetostática en medios materiales" class="header"><a href="#Magnetostática en medios materiales">Magnetostática en medios materiales</a></h2></div>
+
+<div id="Magnetostática en medios materiales-Campos magnetismo"><h5 id="Campos magnetismo" class="header"><a href="#Magnetostática en medios materiales-Campos magnetismo">Campos magnetismo</a></h5></div>
+
+<p>
+<span id="Magnetostática en medios materiales-Campos magnetismo-Campo inducción magnética"></span><strong id="Campo inducción magnética">Campo inducción magnética</strong> o densidad de flujo magnético: \(\vec B\), \([T]\)
+</p>
+<ul>
+<li>
+Su circulación depende de las corrientes "totales" (reales + magnetización)
+
+</ul>
+
+<p>
+<span id="Magnetostática en medios materiales-Campos magnetismo-Campo de vector de magnetización"></span><strong id="Campo de vector de magnetización">Campo de vector de magnetización</strong>:\(\vec M = \frac{\partial \vec \mu}{\partial Vol}\),  \([\frac Am]\)
+</p>
+<ul>
+<li>
+Momento magnético promedio por unidad de volumen.
+
+<li>
+es nulo en el vacío, pues allí no hay átomos con momento magnético
+
+</ul>
+
+<p>
+<span id="Magnetostática en medios materiales-Campos magnetismo-Campo magnético"></span><strong id="Campo magnético">Campo magnético</strong>: \(\vec H = \frac{\vec B}{\mu_0} - \vec M\), \([\frac Am]\)
+</p>
+<ul>
+<li>
+Su circulación depende de las corrientes reales.
+
+</ul>
+
+<p>
+<span id="Magnetostática en medios materiales-Campos magnetismo-Corriente real"></span><strong id="Corriente real">Corriente real</strong> o de conducción (\(i_r\)):
+</p>
+<ul>
+<li>
+Es la corriente que circula por los conductores
+
+</ul>
+
+<p>
+<span id="Magnetostática en medios materiales-Campos magnetismo-Corriente imaginaria"></span><strong id="Corriente imaginaria">Corriente imaginaria</strong> de magnetización (\(i_m\)):
+</p>
+<ul>
+<li>
+Es la corriente imaginaria asociada a los momentos magnéticos del material.
+
+</ul>
+
+
+<div id="Magnetostática en medios materiales-Ley de Ampere para magnetostática en materiales"><h4 id="Ley de Ampere para magnetostática en materiales" class="header"><a href="#Magnetostática en medios materiales-Ley de Ampere para magnetostática en materiales">Ley de Ampere para magnetostática en materiales</a></h4></div>
+
+<p>
+\(i_{total-conc(S(C))} = i_{real-conc(S(C))}  + i_{imag-conc(S(C))} \)
+</p>
+\begin{align}
+
+\oint_C \vec B \cdot d \vec l = \mu_0 i_{total-conc(S(C))} \\
+\end{align}
+
+\begin{align}
+\oint_C \vec H \cdot d \vec l = i_{real-conc(S(C))} \\
+\end{align}
+
+\begin{align}
+\oint_C \vec M \cdot d \vec l = i_{imag-conc(S(C))} \\
+\end{align}
+
+<div id="Magnetostática en medios materiales-Relaciones"><h4 id="Relaciones" class="header"><a href="#Magnetostática en medios materiales-Relaciones">Relaciones</a></h4></div>
+
+\begin{align}
+\vec M = \chi_m \vec H \\
+\vec B = \mu \vec H = \mu_0 \mu_r \vec H \\
+\vec B = \mu_0(\vec H + \vec M)
+\end{align}
+
+<p>
+donde \(\mu_r = \chi_m + 1\)
+</p>
+
+<p>
+En medios <em>LIH</em>, la permeabilidad magnética relativa \(\mu_r\) y la susceptibilidad magnética \(\chi_r\) son parámetros escalares y constantes.
+</p>
+
+<div id="Clasificación de materiales"><h2 id="Clasificación de materiales" class="header"><a href="#Clasificación de materiales">Clasificación de materiales</a></h2></div>
+
+<p>
+<span id="Clasificación de materiales-Diamagnéticos"></span><strong id="Diamagnéticos">Diamagnéticos</strong>: \(\chi_m &lt; 0\)
+</p>
+<ul>
+<li>
+Son (muy levemente) <span id="Clasificación de materiales-repelidos"></span><strong id="repelidos">repelidos</strong> por campos magnéticos.
+
+<li>
+Al quitar \(H\), \(M\) desaparece.
+
+</ul>
+
+<p>
+<span id="Clasificación de materiales-Paramagnéticos"></span><strong id="Paramagnéticos">Paramagnéticos</strong>: \(\chi_m &gt; 0\)
+</p>
+<ul>
+<li>
+Son (muy levemente) <span id="Clasificación de materiales-atraídos"></span><strong id="atraídos">atraídos</strong> por campos magnéticos.
+
+<li>
+Al quitar \(H\), \(M\) desaparece.
+
+</ul>
+
+<p>
+<span id="Clasificación de materiales-Ferromagnéticos"></span><strong id="Ferromagnéticos">Ferromagnéticos</strong>: \(\chi_m &gt;&gt; 0\)
+</p>
+<ul>
+<li>
+Son <span id="Clasificación de materiales-atraídos"></span><strong id="atraídos">atraídos</strong> por campos magnéticos.
+
+<li>
+Al quitar \(H\), \(M\) queda remanente. Este es el fenómeno de <span id="Clasificación de materiales-remanencia"></span><strong id="remanencia">remanencia</strong>, como cuando acerco un clavo a un imán, luego por más que lo aleje del imán sigue 'imantado'.
+
+<li>
+Materiales magnéticos <span id="Clasificación de materiales-duros"></span><strong id="duros">duros</strong>: Es difícil magnetizarlos y desmagnetizarlos.
+
+<li>
+Materiales magnéticos <span id="Clasificación de materiales-blandos"></span><strong id="blandos">blandos</strong>: Es fácil magnetizarlos y desmagnetizarlos.
+
+</ul>
+
+
+<div id="Clasificación de materiales-Material magnético delgado"><h3 id="Material magnético delgado" class="header"><a href="#Clasificación de materiales-Material magnético delgado">Material magnético delgado</a></h3></div>
+
+<p>
+Un material magnético es delgado, cuando la sección \(S\) de un material magnético es mucho menor que su longitud media \(L_m\).
+</p>
+
+\begin{align}
+\sqrt S &lt;&lt; L_m
+\end{align}
+
+<p>
+<span id="Clasificación de materiales-Material magnético delgado-Ejemplo toroide"></span><strong id="Ejemplo toroide">Ejemplo toroide</strong>: \(L_m = 2\pi (R_{externo} - R_{interno})\)
+</p>
+<ul>
+<li>
+Entonces un toroide es fino si la raiz de su sección es mucho menor que su longitud media.
+
+</ul>
+
+<p>
+Si el material es delgado, entonces \(\vec B, \vec M, \vec H\) son paralelos a la línea media y normales a la sección. Por lo que
+</p>
+
+\begin{align}
+\oint_C \vec H \cdot d \vec l =  i_{real-conc(S(C))} \\
+H \oint_C d\vec l =  i_{real-conc(S(C))} \\
+H L_m=  i_{real-conc(S(C))} \\
+\end{align}
+
+<p>
+Y como \(\vec B\) es uniforme en toda sección \(S\), entonces el flujo a traves de una sección es:
+</p>
+\begin{align}
+\iint \vec B \cdot \vec dS = BS
+\end{align}
+
+    </article>
+</body>
+</html>

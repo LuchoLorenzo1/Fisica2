@@ -1,0 +1,304 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>corriente_alterna</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Circuitos de corriente alterna"><h2 id="Circuitos de corriente alterna" class="header"><a href="#Circuitos de corriente alterna">Circuitos de corriente alterna</a></h2></div>
+
+<p>
+Circuitos que tienen un generador, que hace variar la tensión constantemente del circuito, y por ende la corriente. Los que estudiamos son senoidales/cosenoidales.
+</p>
+
+<div id="Circuitos de corriente alterna-Valor eficaz"><h3 id="Valor eficaz" class="header"><a href="#Circuitos de corriente alterna-Valor eficaz">Valor eficaz</a></h3></div>
+
+<p>
+Valor eficaz de la tensión que depende del tiempo.
+</p>
+
+\begin{align}
+F_{eficaz} = \sqrt{&lt; f^2(t) &gt;} = \sqrt{\int_0^T f^2(t)dt \over \int_0^T dt} =  \sqrt{\frac 1T \int_0^T f^2(t)dt}
+\end{align}
+
+<p>
+Para funciones seoidales: \(f(t) = F_0 sen(wt + \varphi)\)
+</p>
+
+\begin{align}
+F_{eficaz} = \frac{1}{\sqrt{2}} F_0 \\
+\sqrt{2}F_{eficaz} = F_0 \\
+\end{align}
+
+<p>
+Red domiciliaria argentina: \(V_{eficaz} = 220V \implies V_0 = \sqrt{2} \cdot 220V \approx 311 V\)
+</p>
+
+<p>
+Todas las mallas y problemas con circuitos pueden ser resueltos como antes, pero siendo \(i(t), v(t), ...\) dependientes del tiempo, por lo que cada malla termina siendo una ed. Es más fácil resolver con el metodo fasorial.
+</p>
+
+<div id="Circuitos de corriente alterna-Resoluciones con fasores"><h3 id="Resoluciones con fasores" class="header"><a href="#Circuitos de corriente alterna-Resoluciones con fasores">Resoluciones con fasores</a></h3></div>
+
+<p>
+Cada circuito lo planteamos como \(\Bbb V_g - \Bbb I \Bbb Z_{eq} = 0\).  Siendo esta una ecuación compleja, donde hay que igualar módulo y argumento.
+</p>
+
+<p>
+<span id="Circuitos de corriente alterna-Resoluciones con fasores-Reactancias"></span><strong id="Reactancias">Reactancias</strong>:
+</p>
+<ul>
+<li>
+Inductiva \(X_L = \omega L\)
+
+<li>
+Capacitiva \(X_C = \frac{1}{\omega C}\)
+
+</ul>
+
+<p>
+El circuito es capacitivo cuando \(X_C &gt; X_L\) e inductivo cuando \(X_L &gt; X_C\)
+</p>
+
+<p>
+<span id="Circuitos de corriente alterna-Resoluciones con fasores-Impedancias"></span><strong id="Impedancias">Impedancias</strong> de los elementos del circuito:
+</p>
+<ul>
+<li>
+\(\Bbb Z_R = R\)
+
+<li>
+\(\Bbb Z_L = j X_L\)
+
+<ul>
+<li>
+\(X_L = \omega L\)
+
+</ul>
+<li>
+\(\Bbb Z_M = j X_M\)
+
+<li>
+\(\Bbb Z_C = -j X_C\)
+
+<ul>
+<li>
+\(X_C = \frac{1}{\omega C}\)
+
+</ul>
+</ul>
+
+<p>
+Cuando aparecen varios inductores es más fácil buscar el \(L_{eq}\).
+</p>
+
+<p>
+La caida de potencial de cada elemento del circuito en forma fasorial es \(\Bbb V_i = \Bbb I \Bbb Z_i\)
+</p>
+<ul>
+<li>
+\(\Bbb V_i = \Bbb I \Bbb Z_R = \Bbb I R\)
+
+<li>
+\(\Bbb V_Lf = \Bbb I \Bbb Z_L = \Bbb I \omega L\)
+
+<li>
+\(\Bbb V_C = \Bbb I \Bbb Z_C  = \Bbb I \frac{1}{\omega C}\)
+
+</ul>
+
+<div id="Circuitos de corriente alterna-Circuito RLC (resistencia, inductancia y capacitancia)"><h3 id="Circuito RLC (resistencia, inductancia y capacitancia)" class="header"><a href="#Circuitos de corriente alterna-Circuito RLC (resistencia, inductancia y capacitancia)">Circuito RLC (resistencia, inductancia y capacitancia)</a></h3></div>
+
+<p>
+Planteo de pseudo-ley de mallas para un circuito con resistor, capacitor e inductor, con un generador de corriente alterna \(v_g(t)= V_0 sin(\omega t + \varphi_v)\):
+</p>
+\begin{align}
+\Bbb V_g - \Bbb I \Bbb Z_R - \Bbb I \Bbb Z_L - \Bbb I \Bbb Z_C = 0 \\
+\Bbb V_g - \Bbb I \Bbb Z_{eq} = 0
+\end{align}
+
+<p>
+Descompongo el \(\Bbb Z_{eq}\) en su parte módulo y argumento.
+</p>
+\begin{align}
+\Bbb Z_{eq} = R + j X_L + (-j  X_C) = R + j(\omega L - \frac{1}{\omega C}) \\
+\vert \Bbb Z_{eq} \vert = \sqrt{R^2 + (\omega L - \frac{1}{\omega C})^2} \\
+\varphi_{eq} = arctan \left( \frac{\omega L - \frac{1}{\omega C}}{R} \right) \\
+\end{align}
+
+<p>
+Encuentro a que es equivalente \(\Bbb I\)
+</p>
+\begin{align}
+\Bbb I &amp;= {\Bbb V_g \over \Bbb Z_{eq}}\\
+\Bbb I &amp;= {|\Bbb V_g| e^{j(\omega t + \varphi_v)} \over |\Bbb Z_{eq}| e^{j(\omega t + \varphi_{Z_{eq}})} }\\
+\Bbb I &amp;= {|\Bbb V_g| \over |\Bbb Z_{eq}|} e^{j(\omega t + \varphi_{v} - \varphi_{Z_{eq}})}\\
+\end{align}
+
+<p>
+Tengo dos ecuaciones, una para el módulo y otra para el argumento.
+</p>
+\begin{cases}
+|\Bbb I| = {|\Bbb V_g| \over |\Bbb Z_{eq}|}\\
+\varphi_i + \omega t = \omega t + \varphi_{v} - \varphi_{Z_{eq}} \implies \varphi_{i} =   \varphi_{v} - \varphi_{Z_{eq}}\\ \\
+\end{cases}
+
+<p>
+Escribo \(\Bbb I\) normal, con su dependencia temporal.
+</p>
+\begin{align}
+i(t) = |\Bbb I| sin(\omega t + \varphi_{i}) \\
+i(t) = {|\Bbb V_g| \over |\Bbb Z_{eq}|} sin(\omega t +  \varphi_{v} - \varphi_{Z_{eq}}) \\
+\end{align}
+
+<p>
+Si \(v(t)\) es \(sin\) entonces para \(i(t)\) es \(sin\). Caso contrario \(cos\) pongo \(cos\).
+</p>
+
+<p>
+<span id="Circuitos de corriente alterna-Circuito RLC (resistencia, inductancia y capacitancia)-obs"></span><strong id="obs">obs</strong>: \(I_{ef} = {|\Bbb V_g| \over |\Bbb Z_{eq}|} \frac{1}{\sqrt{2}}\)
+</p>
+
+<div id="Circuitos de corriente alterna-Diagramas fasoriales"><h3 id="Diagramas fasoriales" class="header"><a href="#Circuitos de corriente alterna-Diagramas fasoriales">Diagramas fasoriales</a></h3></div>
+
+<ul>
+<li>
+Elegir \(\varphi_i = 0\) (a menos que sea dato directo o indirecto del problema) y dibujar \(\Bbb I\) sobre el eje real.
+
+<li>
+Dibujar \(\Bbb V_R\) en fase con \(\Bbb I\)
+
+<li>
+Dibujar \(\Bbb V_L\) 90° adelantado respecto de \(\Bbb I\)(es decir, a 90° en sentido antihorario). Usar la misma escala para \(\Bbb V_L\) que para \(\Bbb V_R\)
+
+<li>
+Dibujar \(\Bbb V_C\) 90° atrasado respecto de \(\Bbb I\) (es decir, a -90° en sentido antihorario). Usar la misma escala para \(\Bbb V_C\) que para \(\Bbb V_R\) y \(\Bbb V_L\)
+
+<li>
+Dibujar la resultante \(\Bbb V_L + \Bbb V_C\)
+
+<li>
+Dibujar \(\Bbb V_g\)  por la Regla del Paralelogramo: debe ser la resultante de la suma vectorial de \(\Bbb V_R\)  y \(\Bbb V_L + \Bbb V_C\)
+
+<li>
+Revisar que \(\vert \Bbb V_g \vert \) hallado gráficamente concuerde con el valor hallado analíticamente.
+
+<li>
+Revisar que \(\varphi_v\) hallado gráficamente concuerde con el valor hallado analíticamente.
+
+<li>
+Si en la resolución analítica se eligió \(\varphi_v = 0\), o bien, \(\varphi_i\) o \(\varphi_v\) eran dato del enunciado, rotar los ejes según corresponda.
+
+</ul>
+
+<p>
+<img src="../../images/diagrama_fasorial_sin_rotar.png" />
+</p>
+
+<p>
+<img src="../../images/diagrama_fasorial_rotado.png" />
+</p>
+
+<p>
+Clasificación del circuito según \(\varphi_z\):
+</p>
+<ul>
+<li>
+Capacitivo \(-\frac{\pi}{2} &lt; \varphi_z &lt; 0\)
+
+<li>
+Inductivo \(0 &lt; \varphi_z &lt; \frac{\pi}{2}\)
+
+<li>
+Resistivo puro \(\varphi_z = 0\)
+
+<li>
+Inductivo puro \(\varphi_z = \frac{\pi}{2}\)
+
+<li>
+Capacitivo puro \(\varphi_z = -\frac{\pi}{2}\)
+
+</ul>
+
+<div id="Circuitos de corriente alterna-Potencia"><h3 id="Potencia" class="header"><a href="#Circuitos de corriente alterna-Potencia">Potencia</a></h3></div>
+
+
+<p>
+<span id="Circuitos de corriente alterna-Potencia-Potencia activa"></span><strong id="Potencia activa">Potencia activa</strong> \(P [W]\): disipada en las resistencia
+</p>
+\begin{align}
+P = V_{ef}I_{ef} cos(\varphi_z) \\
+P = V_{ef}I_{ef} \frac{R}{|Z_{eq}|} \\
+P = I^2_{ef} R \\
+\end{align}
+
+<p>
+<span id="Circuitos de corriente alterna-Potencia-Potencia reactiva"></span><strong id="Potencia reactiva">Potencia reactiva</strong>\(Q [VAR]\): Potencia utilizada para la creación de los campos eléctrico y magnético en los capacitores e inductores, respectivamente.
+</p>
+\begin{align}
+Q &amp;= V_{ef}I_{ef} sen(\varphi_z) \\
+Q &amp;= V_{ef}I_{ef} \frac{X_L - X_C}{|Z_{eq}|} \\
+Q &amp;= I^2_{ef} (X_L - X_C) \\
+\end{align}
+
+<p>
+<span id="Circuitos de corriente alterna-Potencia-Potencia aparente"></span><strong id="Potencia aparente">Potencia aparente</strong> \(S [V A]\): Potencia total entregada por la fuente
+</p>
+\begin{align}
+S = V_{ef}I_{ef} \\
+S = I^2_{ef} |Z_{eq}| \\
+S^2 = P^2 + Q^2 \\
+\end{align}
+
+<p>
+<span id="Circuitos de corriente alterna-Potencia-Factor de potencia"></span><strong id="Factor de potencia">Factor de potencia</strong>:
+</p>
+\begin{align}
+cos(\varphi_z) = \frac{R}{|Z_{eq}|}
+\end{align}
+
+<div id="Circuitos de corriente alterna-Potencia-Resonancia"><h4 id="Resonancia" class="header"><a href="#Circuitos de corriente alterna-Potencia-Resonancia">Resonancia</a></h4></div>
+
+<p>
+Resonancia en el circuito \(\implies\) la parte imaginaria de la impedancia equivalente del circuito se cancela
+</p>
+
+\begin{align}
+X_L - X_C = 0\\
+\omega_{res} L  - \frac{1}{\omega_{res} C} = 0\\
+\omega_{res} = \frac{1}{\sqrt{LC}} \\
+f_{res} = \frac{1}{2\pi \sqrt{LC}} \\
+\end{align}
+
+<p>
+En estos casos, la corriente está en fase con la tensión y el circuito es resistivo puro.
+</p>
+
+<p>
+La corriente ( y por lo tanto la potencia disipada) es máxima cuando el circuito está en resonancia.
+</p>
+
+<div id="Circuitos de corriente alterna-Transformador"><h3 id="Transformador" class="header"><a href="#Circuitos de corriente alterna-Transformador">Transformador</a></h3></div>
+
+<p>
+<span id="Circuitos de corriente alterna-Transformador-Dispositivo"></span><strong id="Dispositivo">Dispositivo</strong> utilizado para <span id="Circuitos de corriente alterna-Transformador-aumentar o disminuir"></span><strong id="aumentar o disminuir">aumentar o disminuir</strong> la <span id="Circuitos de corriente alterna-Transformador-tensión"></span><strong id="tensión">tensión</strong> alterna en un circuito. Principio de funcionamiento basado en que una corriente alterna (es variable en el tiempo) en el bobinado primario, generará un campo y por lo tanto un flujo magnético alterno (variable en el tiempo). Inducirá así una <span id="Circuitos de corriente alterna-Transformador-fem"></span><strong id="fem">fem</strong> alterna en el bobinado secundario, que está acoplado magnéticamente con el primario.
+</p>
+
+<p>
+Relación de transformación
+</p>
+\begin{align}
+\frac{v_1}{v_2} = \frac 1k \frac{N_1}{N_2} = \frac{1}{\frac{\phi_{21}}{\phi_{11}}} \frac{N_1}{N_2} \\
+\frac{v_1}{v_2}  = \frac{\phi_{11}}{\phi_{21}} \frac{N_1}{N_2}
+\end{align}
+
+    </article>
+</body>
+</html>

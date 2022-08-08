@@ -1,0 +1,140 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>potencial_electrico</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Potencial electrostático"><h2 id="Potencial electrostático" class="header"><a href="#Potencial electrostático">Potencial electrostático</a></h2></div>
+
+<p>
+El rotor del campo electrostático es nulo en todos los puntos del espacio: \(\vec \nabla \times \vec E = \vec 0\)
+</p>
+<ul>
+<li>
+Todo campo electrostático ese irrotacional
+
+</ul>
+
+<p>
+Por lo que la circulación sobre cualquier curva cerrada es \(0\) (por teorema de Stokes)
+</p>
+\begin{align}
+\iint_{S(C)} ( \vec \nabla \times \vec E ) \cdot d\vec s = \oint \vec E \cdot d\vec l = 0
+\end{align}
+
+<p>
+Todo campo irrotacional es un campo conservativo, por lo que se puede afirmar que:
+</p>
+\begin{align}
+W_{campo-electrostático} = \oint_C \vec F_{electrostática} \cdot d\vec l = 0
+\end{align}
+
+<p>
+Y también se puede afirmar que el campo es el gradiente de una función potencial. (recordando condicion necesaria para que un campo tenga función potencial)
+</p>
+\begin{align}
+\vec E = - \vec \nabla V
+\end{align}
+
+<p>
+La integral de linea no depende del camino. (sino de inicial y final):
+</p>
+
+\begin{align}
+\int_{\vec r_a}^{\vec r_b} \vec E \cdot d\vec l = -\int_{V(\vec r_a)}^{V(\vec r_b)} dV = -\left[ V(\vec r_b) - V(\vec r_a) \right]
+\end{align}
+
+<p>
+Esta diferencia se llama <span id="Potencial electrostático-potencial"></span><strong id="potencial">potencial</strong> de \(b\) con respecto \(a\)
+</p>
+<ul>
+<li>
+La diferencia de potencial entre dos puntos se suele denominar <span id="Potencial electrostático-voltaje"></span><strong id="voltaje">voltaje</strong>.
+
+</ul>
+
+<p>
+Ahora teniendo una fuerza eléctrica, el trabajo que hace una fuerza externa igual y de sentido contrario desde \(\vec r_a\) hasta \(\vec r_b\) es:
+</p>
+\begin{align}
+W\underset{\text { el agente externo }}{\text { realizado por }} &amp; =\int_{\vec{r}_{a}}^{\vec{r}_{b}} \overrightarrow{F_{\text {ext }}} \cdot d \vec{l}=\int_{\vec{r}_{a}}^{\vec{r}_{b}}-\overrightarrow{F_{e l}} \cdot d \vec{l}=\int_{\vec{r}_{a}}^{\vec{r}_{b}}-q \vec{E} \cdot d \vec{l} \\
+&amp; =q\left(-\int_{\vec{r}_{a}}^{\vec{r}_{b}} \vec{E} \cdot d \vec{l}\right) \\
+&amp; = q \left[ V(\vec r_b) - V(\vec r_a) \right]
+\end{align}
+
+<p>
+\(V(\vec r_b) - V(\vec r_a)\) el potencial de \(b\) con respecto a \(a\), es igual al trabajo realizado por una fuerza externa para desplazar (cuasiestáticamente) una unidad de carga desde a hasta b.
+</p>
+
+\begin{align}
+\Delta V = \frac{W_{ext}}{q_0}\\
+\end{align}
+
+<div id="Potencial electrostático-Diferencia de potencial electrostático, entre dos puntos del espacio"><h3 id="Diferencia de potencial electrostático, entre dos puntos del espacio" class="header"><a href="#Potencial electrostático-Diferencia de potencial electrostático, entre dos puntos del espacio">Diferencia de potencial electrostático, entre dos puntos del espacio</a></h3></div>
+
+<p>
+Diferencia de potencial para un campo con \(N\) cargas puntuales. Surge de hacer la integral de línea del campo de una carga puntual, y por superposición se llega a:
+</p>
+\begin{align}
+V\left(\vec{r}_{b}\right)-V\left(\vec{r}_{a}\right) = -\int_{\vec r_a}^{\vec r_b} \vec E \cdot d\vec l = \sum_{i=1}^{N} V_{i}\left(\vec{r}_{b}\right)-V_{i}\left(\vec{r}_{a}\right)=\sum_{i=1}^{N} \frac{q_{i}^{\prime}}{4 \pi \varepsilon_{0}}\left(\frac{1}{\left|\vec{r}_{b}-\vec{r}_{i}^{\prime}\right|}-\frac{1}{\left|\vec{r}_{a}-\vec r_{i}^{\prime}\right|}\right)
+\end{align}
+
+<p>
+Distribución continua:
+</p>
+\begin{align}
+V\left(\vec{r}_{b}\right)-V\left(\vec{r}_{a}\right) = -\int_{\vec r_a}^{\vec r_b} \vec E \cdot d\vec l = \frac{1}{4 \pi \varepsilon_{0}} \int\left(\frac{1}{\left|\vec{r}_{b}-\vec{r}^{\prime}\right|}-\frac{1}{\left|\vec{r}_{a}-\vec{r}^{\prime}\right|}\right) d q^{\prime}
+\end{align}
+
+<div id="Potencial electrostático-Referencia en el infinito"><h3 id="Referencia en el infinito" class="header"><a href="#Potencial electrostático-Referencia en el infinito">Referencia en el infinito</a></h3></div>
+
+<p>
+Colocamos una referencia en el infinito:
+</p>
+
+<ul>
+<li>
+\(r_a \to \infty \land V(\vec r_a) = 0\)
+
+</ul>
+
+\begin{align}
+V \left(\vec{r} \right)= -\int_{\infty}^{\vec r} \vec E \cdot d\vec l = \frac{1}{4 \pi \varepsilon_{0}} \int\left(\frac{1}{\left|\vec{r}-\vec{r}^{\prime}\right|}\right) d q^{\prime}
+\end{align}
+
+<p>
+Significaría el trabajo de una fuerza externa que hace una particula viniendo desde el infinito hasta \(\vec r\)
+</p>
+<blockquote>
+obs:  Para distribuciones <span id="Potencial electrostático-Referencia en el infinito-no acotadas de carga, no puedo colocar la referencia en el infinito"></span><strong id="no acotadas de carga, no puedo colocar la referencia en el infinito">no acotadas de carga, no puedo colocar la referencia en el infinito</strong>.
+</blockquote>
+
+<div id="Equipotencial"><h2 id="Equipotencial" class="header"><a href="#Equipotencial">Equipotencial</a></h2></div>
+
+<p>
+Una equipotencial es una región del espacio para la que todo punto está al mismo potencial.
+</p>
+
+\begin{align}
+\vec E = - \vec \nabla V
+\end{align}
+<ul>
+<li>
+Desplazarse en la dirección del campo significa hacerlo en la dirección de V decreciente
+
+<li>
+De aca concluimos que las líneas de campo tienen que ser perpendiculares a los conjuntos equipotenciales.
+
+</ul>
+
+    </article>
+</body>
+</html>

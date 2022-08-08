@@ -1,0 +1,71 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>campo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Campo"><h2 id="Campo" class="header"><a href="#Campo">Campo</a></h2></div>
+
+<p>
+Magnitud física que tiene un valor definido para cada punto del espacio en cada instante de tiempo.
+</p>
+
+<p>
+Suponiendo que tenemos algún sistema con cargas, definimos el campo eléctrico en un punto como 'la fuerza que recibiría una carguita muy chiquita'.
+</p>
+
+\begin{align}
+\vec E(\vec r) = \lim_{+q_0 \to 0} {\vec F_{+q_0} (\vec r) \over +q_0 } \\
+
+ \vec E(\vec r) = k \sum_{i=1}^{N} \frac{q_i'}{|\vec r - \vec r'_i|^3} (\vec r - \vec r'_i)\\
+\end{align}
+
+<ul>
+<li>
+\(\vec r\) <span id="Campo-Punto campo"></span><strong id="Punto campo">Punto campo</strong>: donde quiero calcular el campo
+
+</ul>
+
+<ul>
+<li>
+\(\vec r'_i\) <span id="Campo-Punto fuente"></span><strong id="Punto fuente">Punto fuente</strong>: donde está la carga que 'produce' campo.
+
+</ul>
+
+
+<p>
+Podemos utilizar el campo eléctrico para encontrar la fuerza que percibe una carga en un punto.
+</p>
+\begin{align}
+\vec F_q(\vec r) = q.\vec E(\vec r)
+\end{align}
+
+<p>
+<span id="Campo-Lineas de campo"></span><strong id="Lineas de campo">Lineas de campo</strong>: Ayuda para visualizar el campo.
+</p>
+<ul>
+<li>
+Cargas positivas como <span id="Campo-fuentes"></span><strong id="fuentes">fuentes</strong>
+
+<li>
+Cargas negativas como <span id="Campo-sumideros"></span><strong id="sumideros">sumideros</strong>
+
+<li>
+La intensidad del campo es proporcional a la densidad de las líneas de campo.
+
+<li>
+El vector campo eléctrico es <span id="Campo-tangente"></span><strong id="tangente">tangente</strong> a las líneas de campo en cada punto
+
+</ul>
+
+    </article>
+</body>
+</html>

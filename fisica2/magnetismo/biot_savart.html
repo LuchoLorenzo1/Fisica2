@@ -1,0 +1,157 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>biot_savart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Ley de Biot-Savart"><h2 id="Ley de Biot-Savart" class="header"><a href="#Ley de Biot-Savart">Ley de Biot-Savart</a></h2></div>
+
+<p>
+Una carga en movimiento genera un campo magnético.
+</p>
+
+<p>
+Podemos calcularlo como:
+</p>
+\begin{align}
+\vec B(\vec r) = \frac{\mu_0}{4 \pi} \int {i d\vec l \times (\vec r - \vec r') \over  |\vec r - \vec r'|^3}
+\end{align}
+<ul>
+<li>
+\([B]= {N \over Am} = Tesla\). La unidad del campo magnético es el tesla.
+
+<li>
+\(\vec r\): Punto campo: donde queremos calcular el campo.
+
+<li>
+\(\vec r'\): Punto fuente: donde está la carga en movimiento \(id\vec l'\)
+
+<li>
+\(d \vec l'\): Dirección y sentido de \(q \vec v_a\)
+
+<li>
+\(\mu_0 = 4 \pi \cdot 10^{-7} [\frac{Tm}{A}]\)
+
+</ul>
+
+<p>
+<span id="Ley de Biot-Savart-observaciones"></span><strong id="observaciones">observaciones</strong>:
+</p>
+
+<ul>
+<li>
+Biot-Savart es el análogo a Coulomb del campo eléctrico.
+
+</ul>
+
+
+<ul>
+<li>
+Para poder visualizar a ojo para donde va a apuntar el campo magnético de una superficie o hilo, podemos usar la regla de la mano derecha. Pongo el dedo gordo en la dirección de la corriente, y los 4 dedos van a apuntar en el sentido del campo.
+
+</ul>
+
+<ul>
+<li>
+Producto vectorial entre versores: \(\hat \varphi \to \hat k\to \hat p\to \hat \varphi\to \hat k\to \hat p\)
+
+<ul>
+<li>
+\(\hat k \times \hat p = \hat \varphi\)
+
+<li>
+\(\hat k \times \hat \varphi = -\hat p\)
+
+</ul>
+</ul>
+
+<ul>
+<li>
+Para resolver usar \(d \vec l\) siempre positivo, y determinar el sentido de la corriente en los límites de integración. (combinar los 2 esta mal)
+
+</ul>
+
+<ul>
+<li>
+Para el campo \(\vec B\), también es válido el principio de superposición. (El campo en un punto es la suma de todos los campos).
+
+</ul>
+
+<div id="Distribuciones de corriente"><h2 id="Distribuciones de corriente" class="header"><a href="#Distribuciones de corriente">Distribuciones de corriente</a></h2></div>
+
+<div id="Distribuciones de corriente-*Corriente lineal*"><h4 id="*Corriente lineal*" class="header"><a href="#Distribuciones de corriente-*Corriente lineal*"><span id="Distribuciones de corriente-*Corriente lineal*-Corriente lineal"></span><strong id="Corriente lineal">Corriente lineal</strong></a></h4></div>
+
+<p>
+1 hilo.
+</p>
+
+<p>
+Ley de Biot-Savart normal.
+</p>
+
+<div id="Distribuciones de corriente-*Corriente superficial o laminar*"><h4 id="*Corriente superficial o laminar*" class="header"><a href="#Distribuciones de corriente-*Corriente superficial o laminar*"><span id="Distribuciones de corriente-*Corriente superficial o laminar*-Corriente superficial o laminar"></span><strong id="Corriente superficial o laminar">Corriente superficial o laminar</strong></a></h4></div>
+
+<p>
+<span id="Distribuciones de corriente-*Corriente superficial o laminar*-N"></span><strong id="N">N</strong> hilos muy próximos formando una superficie.
+</p>
+\begin{align}
+i_{sup-total} [A] = N i = \int_L \vec K(\vec r) \cdot dl \hat n_L
+\end{align}
+<p>
+\(\vec K [\frac Am]\) densidad de corriente superficial. Corriente que pasa por una línea (\(L\)) Dirección y sentido de la velocidad de arrastre de los portadores de cargas positivos.
+</p>
+
+<p>
+\(K = \frac{Ni}{L}\)
+</p>
+
+<p>
+Corriente uniforme: \(i = \int K dl\)
+</p>
+
+<p>
+Ley biot-savart:
+</p>
+\begin{align}
+\vec B(\vec r) = \frac{\mu_0}{4 \pi} \int {\vec K(\vec r) ds' \times (\vec r - \vec r') \over  |\vec r - \vec r'|^3}
+\end{align}
+
+
+<div id="Distribuciones de corriente-*Corriente volumétrica*"><h4 id="*Corriente volumétrica*" class="header"><a href="#Distribuciones de corriente-*Corriente volumétrica*"><span id="Distribuciones de corriente-*Corriente volumétrica*-Corriente volumétrica"></span><strong id="Corriente volumétrica">Corriente volumétrica</strong></a></h4></div>
+
+<p>
+<span id="Distribuciones de corriente-*Corriente volumétrica*-N"></span><strong id="N">N</strong> hilos muy próximos formando un volumen.
+</p>
+\begin{align}
+i_{vol-total} [A] = N i = \int_A \vec J(\vec r) \cdot ds \hat n_A
+\end{align}
+<p>
+\(\vec J [\frac{A}{m^2}]\) densidad de corriente volumétrica. Corriente que pasa por una superficie (\(A\)) Dirección y sentido de la velocidad de arrastre de los portadores de cargas positivos.
+</p>
+
+<p>
+\(J = \frac{Ni}{A}\)
+</p>
+
+<p>
+Corriente uniforme: \( i = \int J ds\)
+</p>
+
+<p>
+Ley biot-savart:
+</p>
+\begin{align}
+\vec B(\vec r) = \frac{\mu_0}{4 \pi} \int {\vec J(\vec r) dv' \times (\vec r - \vec r') \over  |\vec r - \vec r'|^3}
+\end{align}
+
+    </article>
+</body>
+</html>

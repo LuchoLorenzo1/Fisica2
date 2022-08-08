@@ -1,0 +1,121 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>capacitores</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Capacitores"><h1 id="Capacitores" class="header"><a href="#Capacitores">Capacitores</a></h1></div>
+
+<ul>
+<li>
+Conjunto de 2 conductores (placas)
+
+<li>
+Sirven para almacenamiento de energía potencial electrostática
+
+<li>
+Decimos que un capacitor está cargado cuando las placas almacenan cargas de igual magnitud y signo contrario. (carga neta siempre es nula).
+
+<li>
+Capacitancia del capacitor (\(C\)): \(C = \frac{Q}{\Delta V}\)
+
+<ul>
+<li>
+Siempre tiene que ser positivo
+
+<li>
+\([C] = \) Faradio.
+
+<li>
+La capacidad es independiente de la carga almacenada. (Como una botella, aunque este vacia puede almacenar cierta cantidad de agua).
+
+<li>
+\(Q\) es la carga de una sola de las placas. (si fuese la suma entre ambas sería \(0\))
+
+</ul>
+<li>
+Mientras más cerca estén ambas placas, más capacitancia.
+
+</ul>
+
+<p>
+Energía electrostática almacenada en un capacitor:
+</p>
+\begin{align}
+U=\frac{1}{2} \frac{Q^{2}}{C}=\frac{1}{2} Q \Delta V=\frac{1}{2} C(\Delta V)^{2}
+\end{align}
+<p>
+Es el trabajo entregado para llevar la carga \(q\) de \(0\) a \(Q\) en un tiempo final.
+</p>
+<ul>
+<li>
+Es la integral en el tiempo de la potencia entregada \(p(t) = i(t)v(t)\):
+
+<li>
+\(i(t)\): corriente
+
+<li>
+\(v(t)\): dif. de potencial
+
+</ul>
+
+
+
+<div id="Capacitores-Capacitancias geometrías"><h4 id="Capacitancias geometrías" class="header"><a href="#Capacitores-Capacitancias geometrías">Capacitancias geometrías</a></h4></div>
+
+<p>
+Esfera: (esfera radio \(R_{int}\) y esfera \(R_{ext}\) que la contiene (con espacio en el medio))
+</p>
+\begin{align}
+C_{\text {esférico }}=\frac{4 \pi \varepsilon_{0}}{\left(\frac{1}{R_{\text {int }}}-\frac{1}{R_{e x t}}\right)}=4 \pi \varepsilon_{0}\left(\frac{R_{\text {int }} R_{\text {ext }}}{R_{\text {ext }}-R_{\text {int }}}\right)
+\end{align}
+
+<p>
+Cilindro: (cilindro radio \(R_{int}\) y cilindro \(R_{ext}\) que lo contiene (con espacio en el medio))
+</p>
+\begin{align}
+\frac{C_{\text {cilíndrico }}}{l}=\frac{2 \pi \varepsilon_{0}}{\ln \left(\frac{R_{\text {ext }}}{R_{\text {int }}}\right)}
+\end{align}
+
+<p>
+Para capacitor entre placas planas (pueden tener cualquier forma):
+</p>
+\begin{align}
+C = \frac{Q}{\Delta V} = \frac{\sigma A}{\frac{\sigma |d|}{\epsilon_0}} = \frac{\epsilon_0 A}{|d|}
+\end{align}
+
+<p>
+Mismo capacitor pero con un dieléctrico de permitividad dieléctrica \(\epsilon_r\):
+</p>
+\begin{align}
+C = \frac{\epsilon_r \epsilon_0 A}{|d|}
+\end{align}
+
+<div id="Capacitores-Conexiones de capacitores"><h3 id="Conexiones de capacitores" class="header"><a href="#Capacitores-Conexiones de capacitores">Conexiones de capacitores</a></h3></div>
+
+<p>
+Capacitancia total de capacitores en paralelo:
+</p>
+\begin{align}
+C_{eq}^{paralelo} = \Sigma_i C_i
+\end{align}
+
+<p>
+Capacitancia total de capacitores en serie (con la misma carga inicial):
+</p>
+\begin{align}
+C_{eq}^{serie^{-1}} = \Sigma_i C_i^{-1} \\
+C_{eq} = (\frac{1}{C_1} + \frac{1}{C_2})^{-1} = \frac{C_1C_2}{C_1 + C_2}
+\end{align}
+
+    </article>
+</body>
+</html>

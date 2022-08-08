@@ -1,0 +1,102 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>induccion_electromagnetica</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Inducción electromagnética"><h2 id="Inducción electromagnética" class="header"><a href="#Inducción electromagnética">Inducción electromagnética</a></h2></div>
+
+<p>
+Teniendo un campo \(\vec B\) que un fluye sobre una espira, si este flujo varía con el tiempo entonces sobre la espira se <span id="Inducción electromagnética-induce una fem"></span><strong id="induce una fem">induce una fem</strong> \(\epsilon_{ind}\) <span id="Inducción electromagnética-proporcional a la variación del flujo"></span><strong id="proporcional a la variación del flujo">proporcional a la variación del flujo</strong>.
+</p>
+
+<p>
+Si el camino que concatena la variación de flujo magnético es conductor, sobre él circulará una corriente eléctrica. Aplicando la Ley de Kirchhoff de mallas: \(\epsilon_{ind} = i_{ind}R\). Por lo que esta fem que induce una corriente en la espira, también creará un campo \(\vec B_{ind}\).
+</p>
+
+<p>
+El sentido de la corriente eléctrica inducida en un conductor por inducción electromagnética, es tal que creará un campo magnético que se oponga al cambio que la produjo, "contrarrestando" de cierta manera el cambio.
+</p>
+
+<div id="Inducción electromagnética-Ley de Faraday-Lenz:"><h3 id="Ley de Faraday-Lenz:" class="header"><a href="#Inducción electromagnética-Ley de Faraday-Lenz:">Ley de Faraday-Lenz:</a></h3></div>
+\begin{align}
+\epsilon_{ind} = -\frac{d \phi_B}{dt} = -\frac{d}{dt} \iint_S \vec B \cdot d\vec s \\
+\end{align}
+
+<p>
+El menos de esta ecuación nos muestra que la fem inducida es <span id="Inducción electromagnética-Ley de Faraday-Lenz:-igual y de signo contrario"></span><strong id="igual y de signo contrario">igual y de signo contrario</strong> a la variación del flujo por la espira. Es decir que si el campo \(\vec B\) original baja su intensidad, o se reduce la superficie de la espira, la fem inducida aumentará en el intervalo de esa reducción. Luego si el campo se estabiliza y no varía, entonces la fem inducida se vuelve \(0\), ya que el flujo también será constante y por lo tanto su variación es \(0\).
+</p>
+
+<p>
+	obs: el sentido de \(i_{ind}\) esta dado por la regla de la mano derecha respecto a la normal del flujo sobre la espira. Si \(\epsilon_{ind}\) queda negativo, la corriente inducida cirulará en sentido contrario al establecido.
+</p>
+
+<div id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie $S$:"><h5 id="Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie $S$:" class="header"><a href="#Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie $S$:">Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):</a></h5></div>
+<ol>
+<li>
+Variación <span id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):-temporal"></span><strong id="temporal">temporal</strong> del módulo del campo magnético \(\vec B\)
+
+<li>
+Variación de la <span id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):-orientación"></span><strong id="orientación">orientación</strong> entre el campo magnético y la superficie \(S\) delimitada por el camino cerrado (es decir, el ángulo entre \(\vec B\) y \(\vec ds\)).
+
+<ul>
+<li>
+Planteo el producto punto como la multiplicación de sus módulos por el coseno del angulo: \(\vec B \cdot \vec ds = |B||ds|cos(\alpha(t)) = |B||ds|cos(wt)\)
+
+</ul>
+<li>
+Variación del <span id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):-área"></span><strong id="área">área</strong> de la superficie \(S\) delimitada por el camino cerrado (se deforma el camino).
+
+<ul>
+<li>
+Ejemplo: el radio una espira circular depende del tiempo.
+
+</ul>
+<li>
+<span id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):-Movimiento"></span><strong id="Movimiento">Movimiento</strong> de la superficie \(S\) en una región del espacio donde el campo magnético \(\vec B\) no es uniforme.
+
+<ul>
+<li>
+Como \(S\) está en movimiento, simplemente sus límites de integración para el flujo tienen una dependencia temporal. Generalmente es un mru o mruv. Recordar que son ambos límites de integración los que tienen que depender del tiempo, sino estaríamos estirando la superficie.
+
+<li>
+Este caso también da lugar al <span id="Inducción electromagnética-Ley de Faraday-Lenz:-Motivos por los que puede variar el flujo de campo magnético concatenado por un camino cerrado de superficie \(S\):-freno magnético"></span><strong id="freno magnético">freno magnético</strong>, el campo original ejerce una fuerza (Lorentz) sobre la espira que se mueve y tiene una corriente inducida. Esta fuerza se opone al movimiento de la espira frenándola.
+
+<li>
+Para este tipo de ejercicios puede pasar que la velocidad de la espira no se reduzca, porque hay una agente externo que se está oponiendo a la fuerza de Lorentz.
+
+</ul>
+</ol>
+
+
+<div id="Ley de Maxwell-Faraday"><h2 id="Ley de Maxwell-Faraday" class="header"><a href="#Ley de Maxwell-Faraday">Ley de Maxwell-Faraday</a></h2></div>
+
+<p>
+Forma diferencial:
+</p>
+\begin{align}
+\vec \nabla \times \vec E = - \frac{\partial \vec B}{\partial t}
+\end{align}
+
+<p>
+Forma integral:
+</p>
+\begin{align}
+\oint_C \vec E \cdot d\vec l = - \iint_{S(C)} \frac{\partial \vec B}{\partial t} \cdot d \vec s
+\end{align}
+
+<p>
+Es decir que el campo \(\vec E\) también puede ser generado por un \(\vec B\) variable en el tiempo. Dicho \(\vec E\), llamado inducido, NO es irrotacional/conservativo.
+</p>
+
+    </article>
+</body>
+</html>

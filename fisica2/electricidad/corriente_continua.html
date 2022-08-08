@@ -1,0 +1,178 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>corriente_continua</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Corriente continua"><h2 id="Corriente continua" class="header"><a href="#Corriente continua">Corriente continua</a></h2></div>
+
+<p>
+Circuito eléctrico: red conductora que contiene al menos una trayectoria cerrada por la que puede fluir interiormente
+carga eléctrica.
+</p>
+<ul>
+<li>
+Transfiere energía potencial de una fuente (ej.: pila) hacia un componente que la almacena (ej.: capacitor) y/o que la convierte en otro tipo de energía (ej.: bombita de luz).
+
+</ul>
+
+<div id="Corriente eléctrica"><h2 id="Corriente eléctrica" class="header"><a href="#Corriente eléctrica">Corriente eléctrica</a></h2></div>
+
+<p>
+\(i\):Corriente eléctrica \([Ampère=A]\): carga positiva que fluye por unidad de tiempo. \(i = \frac{dq}{dt}\)
+</p>
+<ul>
+<li>
+magnitud escalar.
+
+</ul>
+
+<p>
+\(\vec j\): Densidad volumétrica de corriente \([A/m^2]\): corriente por unidad de área
+</p>
+<ul>
+<li>
+J es volumétrica pero es por unidad de área
+
+</ul>
+
+\begin{align}
+i = \iint_A \vec j(\vec r) \cdot d\vec s
+\end{align}
+
+<p>
+Corriente continua: corriente constante en el tiempo (estado estacionario) \(\implies \vec v_a = cte\)
+</p>
+
+<div id="Ley de ohm"><h2 id="Ley de ohm" class="header"><a href="#Ley de ohm">Ley de ohm</a></h2></div>
+
+<p>
+Cuanto menor es la conductividad del material, se debe aplicar un campo eléctrico más intenso para lograr la misma densidad de corriente.
+</p>
+
+<p>
+Ley de ohm forma diferencial
+</p>
+\begin{align}
+\vec j = \sigma \vec E
+\end{align}
+
+\begin{align}
+i = \iint_A \vec j(\vec r) \cdot d\vec s \implies E = \frac{i}{\sigma A}
+\end{align}
+
+<p>
+Resistencia eléctrica de un conductor de sección uniforme: \([Ohm=\Omega]\)
+</p>
+\begin{align}
+R = \rho \frac lA
+\end{align}
+<ul>
+<li>
+\(\rho = \frac 1\sigma\): Resistividad eléctrica
+
+</ul>
+
+<p>
+Ley de ohm forma integral
+</p>
+\begin{align}
+\Delta V = iR
+\end{align}
+<ul>
+<li>
+Al atravesar una Resistencia \(R\), el potencial cae si lo hacemos en el mismo sentido que \(i\)
+
+</ul>
+
+<div id="Resistencias"><h2 id="Resistencias" class="header"><a href="#Resistencias">Resistencias</a></h2></div>
+
+<p>
+Resistencias en serie:
+</p>
+\begin{align}
+R_{eq}^{serie} = \Sigma_i R_i
+\end{align}
+
+<p>
+Resistencias en paralelo:
+</p>
+\begin{align}
+R_{eq}^{paralelo} = [\Sigma_i R_i^{-1}]^{-1}
+\end{align}
+
+<div id="Leyes de Kirchhoff"><h2 id="Leyes de Kirchhoff" class="header"><a href="#Leyes de Kirchhoff">Leyes de Kirchhoff</a></h2></div>
+
+<p>
+Fem (fuerza electromotriz, \(\epsilon\)] [Volts]: Trabajo por unidad de carga realizado por la fuente
+sobre el circuito. No es una fuerza.
+</p>
+
+<p>
+<span id="Leyes de Kirchhoff-Ley de nodos"></span><strong id="Ley de nodos">Ley de nodos</strong>: La suma algebraica de todas las corrientes que pasan por un nodo es igual a cero.
+</p>
+<ul>
+<li>
+nodo: siempre que hay una bifurcación. No simplemente cuando el cable dobla.
+
+</ul>
+
+\begin{align}
+\Sigma i = 0 \implies \Sigma i_{\text{entrantes al nodo}} = \Sigma i_{\text{salientes al nodo}}
+\end{align}
+
+<p>
+Ley de mallas: La suma algebraica neta de las subidas/caídas de tensión en una malla es igual a cero.
+</p>
+
+\begin{align}
+\Sigma \epsilon - \Sigma iR = 0
+\end{align}
+
+<div id="Potencia eléctrica"><h2 id="Potencia eléctrica" class="header"><a href="#Potencia eléctrica">Potencia eléctrica</a></h2></div>
+
+<p>
+Rapidez con que entrega, absorbe o disipa energía un componente eléctrico en un circuito.
+</p>
+
+\begin{align}
+P = \frac{dU}{dt} = i.\Delta V\\
+[P] = \text{Watts} = W
+\end{align}
+<ul>
+<li>
+Donde \(i = \frac{dq}{dt}\) es la corriente que circula por el componente. (ej.: resistor, pila)
+
+<li>
+\(\Delta V\) diferencia de potencial entre los bornes del componente (o tensión sobre él)
+
+</ul>
+
+<p>
+Ejemplo: potencia entregada por pila ideal \( P = i\epsilon\)
+</p>
+
+<p>
+Podemos calcular también la potencia perdida o disipada en una resistencia como (<span id="Potencia eléctrica-Efecto Joule o Joule heating"></span><strong id="Efecto Joule o Joule heating">Efecto Joule o Joule heating</strong>):  \(P = i.\Delta V\) (por ley de ohm) \( = i.iR= i^2 R\)
+</p>
+
+<div id="Potencia eléctrica-Balance de potencias:"><h4 id="Balance de potencias:" class="header"><a href="#Potencia eléctrica-Balance de potencias:">Balance de potencias:</a></h4></div>
+
+<p>
+Como el sistema es conservativo en régimen estacionario, la potencia disipada en los resistores (por efecto Joule), es provista por las fem
+</p>
+\begin{align}
+\sum i\epsilon - \sum i^2 R = 0
+\end{align}
+
+    </article>
+</body>
+</html>

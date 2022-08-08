@@ -1,0 +1,230 @@
+<html>
+<head>
+    <link rel="Stylesheet" type="text/css" href="../../style.css" />
+    <title>transmision_calor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+    <p>
+    <a href="../../fisica2.html">Index</a>
+    </p>
+    <hr>
+    <article class="content">
+
+<div id="Transmisión de calor"><h1 id="Transmisión de calor" class="header"><a href="#Transmisión de calor">Transmisión de calor</a></h1></div>
+
+<p>
+El calor generado (heat source) es igual al aumento de energía del sistema y el calor transferido al entorno:
+</p>
+
+\begin{align}
+\frac{\delta Q_{g e n}}{d t}=m C \frac{d T}{d t}+\unicode{x222F}_{S} \frac{\delta \vec{q}}{d t} \cdot d \vec{s}
+\end{align}
+
+<ul>
+<li>
+Estudiamos en régimen estacionario: \( \frac{dT}{dt} = 0 \), la temperatura en un punto no varia con respecto al tiempo.
+
+</ul>
+
+<p>
+llamamos <span id="Transmisión de calor-fuente"></span><strong id="fuente">fuente</strong> cuando entrega o recibe \(Q\) sin cambiar \(T\).
+</p>
+
+\begin{align}
+\dot Q = \frac{\delta Q_{g e n}}{d t}= \unicode{x222F}_{S} \frac{\delta \vec{q}}{d t} \cdot d \vec{s}
+\end{align}
+
+<ul>
+<li>
+\(\dot Q\) es la cantidad de calor transferido por unidad de tiempo.
+
+</ul>
+
+<div id="Transmisión de calor-Conducción"><h2 id="Conducción" class="header"><a href="#Transmisión de calor-Conducción">Conducción</a></h2></div>
+
+<p>
+Transmisión por contacto directo, choque de particulas. Las  más energéticas le entregan energía a las
+menos energéticas.
+</p>
+
+<div id="Transmisión de calor-Conducción-Ley de fourier:"><h6 id="Ley de fourier:" class="header"><a href="#Transmisión de calor-Conducción-Ley de fourier:">Ley de fourier:</a></h6></div>
+
+\begin{align}
+\dot Q = -\lambda \vec A \cdot \vec \nabla T
+\end{align}
+
+<ul>
+<li>
+\(\vec A[m^2]\): área de la superficie de intercambio de calor
+
+<ul>
+<li>
+el sentido del vector se elige de manera tal que el calor positivo fluye en la dirección de temperaturas decrecientes.
+
+</ul>
+<li>
+\(\vec \nabla T[\frac Km]\): gradiente térmico (con respecto a la posición), apunta en la dirección del máximo crecimiento de T
+
+<li>
+\(λ = k [W/(mK)]\): conductividad térmica del material
+
+</ul>
+
+<div id="Transmisión de calor-Conducción-Geometrías:"><h6 id="Geometrías:" class="header"><a href="#Transmisión de calor-Conducción-Geometrías:">Geometrías:</a></h6></div>
+
+<ul>
+<li>
+Plana: \(\sqrt A &gt;&gt; \text{grosor pared}\), (pared infinita) asumimos que la pared es muy grande para que no afecten los bordes.
+
+<li>
+Cilíndrica: \(A = 2\pi \rho l\).
+
+<li>
+Esferica: \(A = 4\pi r^2\)
+
+</ul>
+
+<p>
+Ambas son radiales (\(A\) depende del radio), desde el centro (del cilindro esfera) hacía afuera. (no através, ya que sería geometría plana)
+</p>
+
+<div id="Transmisión de calor-Conducción-Limites de integración"><h6 id="Limites de integración" class="header"><a href="#Transmisión de calor-Conducción-Limites de integración">Limites de integración</a></h6></div>
+
+<p>
+Cuando elegimos la dirección que toma el \(\vec \nabla T\), podemos hacerlo con el versor adecuado (apuntando en temperaturas crecientes, inverso a donde se transmite el calor, ya que va de caliete a frio), pero luego el límite inferior de la integral tiene que ser escalar menor que el límite superior.
+</p>
+
+<p>
+En cambio la otra opción es hacer que el gradiente apunte al mismo lado que el \(\vec A\), pero hacer que los límites de integración a ambos lados sean correspondientes.
+</p>
+<ul>
+<li>
+\(\int_{x_1}^{x_2} ... dx = \int_{T(x_1) = T_1}^{T(x_2) = T_2} ...  dT\)
+
+</ul>
+
+<p>
+Mezclando los métodos, estaríamos indicando indirectamente el flujo de calor dos veces; en el versor del gradiente y en los límites de integración.
+</p>
+
+
+<div id="Transmisión de calor-Convección"><h2 id="Convección" class="header"><a href="#Transmisión de calor-Convección">Convección</a></h2></div>
+
+<p>
+Transferencia de calor entre una superficie sólida y un fluido (líquido, gas, o plasma). Ocurre por el movimiento del fluido.
+</p>
+
+\begin{align}
+\dot Q = hA(T_{caliente} - T_{frio})
+\end{align}
+<ul>
+<li>
+Ecuación escalar.
+
+</ul>
+
+<ul>
+<li>
+Ejemplo pared: Entre un ambiente (con aire) y una pared, no hay un equilibrio térmico. Es imposible que tengan la misma temperatura, esto se debe a la convección producida en el aire. En un espacio antes de la pared tenemos la capa donde se produce esta convección, y la tenemos que tener en cuenta para calcular la temperatua de la pared.
+
+</ul>
+
+<p>
+<img src="../../images/conveccion_conduccion_pared.png" />
+</p>
+
+<div id="Transmisión de calor-Perfil temperaturas"><h2 id="Perfil temperaturas" class="header"><a href="#Transmisión de calor-Perfil temperaturas">Perfil temperaturas</a></h2></div>
+
+<p>
+Perfil de temperaturas: se obtiene calculando \(T(x), T(\rho), T(r)\) (la temperatura con respecto a la posición).
+</p>
+<ul>
+<li>
+Cambio el segundo limite por una variable (\(r_2, \rho_2, x_2 \to r,\rho,x\)), y despejo \(T_2\) (que cambio el nombre por \(T\)).
+
+</ul>
+
+<ul>
+<li>
+Plana: perfil lineal
+
+<li>
+Cilindrica: perfil logarítmico
+
+<li>
+Esférica: perfil homográfico
+
+</ul>
+
+<div id="Transmisión de calor-Perfil temperaturas-Para Ejercicios"><h6 id="Para Ejercicios" class="header"><a href="#Transmisión de calor-Perfil temperaturas-Para Ejercicios">Para Ejercicios</a></h6></div>
+
+<p>
+Cuando tengo muchas capas, el ejercicio consiste en plantear un sistema de ecuaciones, planteando cada ecuación por cada etapa.
+</p>
+<ul>
+<li>
+Obs.: El \(\dot Q\)  en cada etapa es el mismo. Un error común es sumar el \(\dot Q\) de cada etapa y hallar un “total”.
+
+</ul>
+
+<p>
+Luego despejar las diferencias de temperatura en cada ecuación. Y generalmente sumando y restando las ecuaciones despejo las temperaturas. (despues resuelvo para \(\dot Q\))
+</p>
+
+<p>
+Ejercicio 6 (FASTIX):
+</p>
+<ul>
+<li>
+Deducimos por las temperaturas, que la mayor temperatura esta adentro, por lo que el calor se transmitirá hacia afuera del caño.
+
+</ul>
+
+<p>
+La transmisión de calor ocurre en 4 etapas:
+</p>
+<ol>
+<li>
+Convección entre fluido interior \((T=\theta_1)\) y superficie de hierro \((T=T_1)\).
+
+<li>
+Conducción a través la superficie de hierro \((T=T_1)\) hasta fastix \((T=T_2)\)
+
+<li>
+Conducción a través del FASTIX \((T=T_2)\), \((T=T_3)\)
+
+<li>
+Convección entre fastix y ambiente \((T=\theta_2)\)
+\[
+\left\{
+
+\begin{array}\\
+
+\dot Q =&amp; h_{fluido} A (\theta_1 - t_1)\\
+\dot Q =&amp; -\lambda_{fe} \vec A \vec \nabla T\\
+\dot Q =&amp; -\lambda_{fastix} \vec A \vec \nabla T\\
+\dot Q =&amp; h_{aire} A (t_2 - \theta_2)\\
+\end{array}\\
+
+\right.
+\]
+
+</ol>
+
+<ul>
+<li>
+Luego teniendo en cuenta que \(A=4 \pi r^2\), integramos la primera y la segunda (con respecto a \(r\) y \(t\)), y despejamos de todas las diferencias de temperaturas. sumamos/restamos las ecuaciones como corresponde para liberarnos de las temperaturas que son incógnitas, y resuelvo para \(\dot Q\).
+
+</ul>
+
+<div id="Transmisión de calor-Radiación"><h2 id="Radiación" class="header"><a href="#Transmisión de calor-Radiación">Radiación</a></h2></div>
+
+<p>
+Los electrones, al vibrar debido a la energía térmica, están permanentemente acelerándose y desacelerándose. Así irradian (emiten) energía con una distribución de longitudes de onda . Se conoce como radiación térmica
+</p>
+
+    </article>
+</body>
+</html>
